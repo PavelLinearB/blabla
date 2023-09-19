@@ -20,8 +20,8 @@ automations:
     run:
       - action: send-slack-message@v1
         args:
-          message: "Hello world :tada:"
-          webhook_url: {{ env.slack_token }}
+          message: "Hello world :tada:. \n etr: {{ calc.etr }}"
+          webhook_url: {{ env.SLACK_TOKEN }}
 
 # The next function calculates the estimated time to review and makes it available in the automation above.
 calc:
